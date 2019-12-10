@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: conf-grafana
+  namespace: default
+data:
+  grafana.ini: |
+          [server]
+          protocol = https
+          http_port = 3000
+          cert_file = /etc/grafana/tls/crt.pem
+          cert_key = /etc/grafana/tls/key.pem

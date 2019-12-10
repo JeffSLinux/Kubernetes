@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: wiki
+spec:
+  selector:
+     run: wiki
+  ports:
+  - protocol: TCP
+    port: 443
+    targetPort: 31100
+  type: NodePort
